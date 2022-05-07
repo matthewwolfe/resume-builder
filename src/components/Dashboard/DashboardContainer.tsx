@@ -1,10 +1,12 @@
+import dynamic from 'next/dynamic';
 import { useResumeBuilderStore } from 'stores/useResumeBuilderStore';
-import Dashboard from './Dashboard';
+
+const Dashboard = dynamic(() => import('./Dashboard'), { ssr: false });
 
 function DashboardContainer() {
-  const { layout } = useResumeBuilderStore();
+  const { layout, setLayout } = useResumeBuilderStore();
 
-  return <Dashboard layout={layout} />;
+  return <Dashboard layout={layout} setLayout={setLayout} />;
 }
 
 export default DashboardContainer;

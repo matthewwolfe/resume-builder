@@ -24,7 +24,6 @@ const usePersonalInfoStore = create<PersonalInfoStore>()(
     }),
     {
       name: 'personal-info',
-      getStorage: () => localStorage,
     },
   ),
 );

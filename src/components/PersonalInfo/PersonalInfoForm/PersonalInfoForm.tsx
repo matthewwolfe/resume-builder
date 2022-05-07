@@ -6,7 +6,7 @@ import { Props } from './PersonalInfoForm.types';
 
 function PersonalInfoForm({ control, errors, onSubmit }: Props) {
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} style={{ width: '100%' }}>
       <Grid container columnSpacing={6}>
         <Grid item xs={12}>
           <Typography fontWeight="bold" variant="h5">
