@@ -1,14 +1,15 @@
 import Typography from '@mui/material/Typography';
-import { Card } from 'design';
+import { PersonalInfoForm } from 'components/PersonalInfo';
+import { Card, Flex } from 'design';
 
 import { Props } from './ResumeBuilder.types';
 
 function ResumeBuilder(props: Props) {
   return (
     <Card>
-      <Typography fontWeight="bold" variant="h5">
-        Personal Information
-      </Typography>
+      <Flex sx={{ mb: 8 }}>
+        <PersonalInfoForm />
+      </Flex>
 
       <Typography fontWeight="bold" variant="h5">
         Summary

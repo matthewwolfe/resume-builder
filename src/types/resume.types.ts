@@ -16,7 +16,7 @@ export interface Education extends Summary {
   graduationDate: string;
 }
 
-export interface PersonalInfo {
+export interface PersonalInfo extends Address {
   firstName: string;
   lastName: string;
   email: string;
