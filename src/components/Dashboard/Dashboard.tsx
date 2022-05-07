@@ -1,4 +1,5 @@
 import ButtonGroup from '@mui/material/ButtonGroup';
+import { ExportJson } from 'components/ExportJson';
 import { ResumeBuilder } from 'components/ResumeBuilder';
 import { ResumePreview } from 'components/ResumePreview';
 import { Button, Flex } from 'design';
@@ -8,7 +9,7 @@ import type { Props } from './Dashboard.types';
 function Dashboard({ layout, setLayout }: Props) {
   return (
     <Flex sx={{ flexDirection: 'column', px: 8, pt: 4, width: 1 }}>
-      <Flex sx={{ justifyContent: 'flex-end' }}>
+      <Flex sx={{ justifyContent: 'space-between' }}>
         <ButtonGroup>
           <Button
             onClick={() => setLayout('builder')}
@@ -31,6 +32,14 @@ function Dashboard({ layout, setLayout }: Props) {
             Preview
           </Button>
         </ButtonGroup>
+
+        <Flex>
+          <Flex mr={2}>
+            <Button variant="contained">Save</Button>
+          </Flex>
+
+          <ExportJson />
+        </Flex>
       </Flex>
 
       <Flex sx={{ pt: 4, pb: 8, width: 1 }}>
