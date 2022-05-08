@@ -9,7 +9,7 @@ import type { Props } from './Dashboard.types';
 function Dashboard({ layout, setLayout }: Props) {
   return (
     <Flex sx={{ flexDirection: 'column', px: 8, pt: 4, width: 1 }}>
-      <Flex sx={{ displayPrint: 'none', justifyContent: 'space-between' }}>
+      <Flex sx={{ displayPrint: 'none', justifyContent: 'space-between', pb: 4 }}>
         <ButtonGroup>
           <Button
             onClick={() => setLayout('builder')}
@@ -44,7 +44,7 @@ function Dashboard({ layout, setLayout }: Props) {
         </Flex>
       </Flex>
 
-      <Flex sx={{ pt: 4, pb: 8, width: 1 }}>
+      <Flex sx={{ pb: 8, width: 1 }}>
         {layout !== 'preview' && (
           <Flex
             sx={{

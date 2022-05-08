@@ -23,10 +23,6 @@ export interface PersonalInfo extends Address {
   phoneNumber: string;
 }
 
-export interface Skill extends Summary {
-  title: string;
-}
-
 export interface Summary {
   summary: string;
 }

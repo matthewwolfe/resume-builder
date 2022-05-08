@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { PersonalInfoForm } from 'components/PersonalInfo';
+import { SkillsForm } from 'components/Skills';
 import { SummaryForm } from 'components/Summary';
 import { Card, Flex } from 'design';
 
@@ -16,9 +17,9 @@ function ResumeBuilder(props: Props) {
         <SummaryForm />
       </Flex>
 
-      <Typography fontWeight="bold" variant="h5">
-        Skills
-      </Typography>
+      <Flex sx={{ mb: 8 }}>
+        <SkillsForm />
+      </Flex>
 
       <Typography fontWeight="bold" variant="h5">
         Experience
