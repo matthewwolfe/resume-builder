@@ -17,8 +17,6 @@ function ExportJson({ json }: Props) {
     downloadLink.click();
   };
 
-  console.log(json);
-
   return (
     <Button onClick={onExport} variant="contained">
       Export as JSON
