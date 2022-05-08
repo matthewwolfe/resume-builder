@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 import type { PersonalInfo } from 'types/resume.types';
 
 interface PersonalInfoStore extends PersonalInfo {
-  setPersonalInfo: (personalInfo: PersonalInfo) => void;
+  updatePersonalInfo: (personalInfo: Partial<PersonalInfo>) => void;
 }
 
 const usePersonalInfoStore = create<PersonalInfoStore>()(
@@ -20,7 +20,7 @@ const usePersonalInfoStore = create<PersonalInfoStore>()(
       state: '',
       country: '',
       zip: '',
-      setPersonalInfo: (personalInfo) => set(() => ({ ...personalInfo })),
+      updatePersonalInfo: (personalInfo) => set(() => ({ ...personalInfo })),
     }),
     {
       name: 'personal-info',

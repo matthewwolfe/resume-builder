@@ -1,174 +1,109 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Controller } from 'react-hook-form';
-import { Button, Flex, TextField } from 'design';
+import { TextField } from 'design';
 import { Props } from './PersonalInfoForm.types';
 
-function PersonalInfoForm({ control, errors, onSubmit }: Props) {
+function PersonalInfoForm({
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  address1,
+  address2,
+  city,
+  state,
+  country,
+  zip,
+  updatePersonalInfo,
+}: Props) {
   return (
-    <form onSubmit={onSubmit} style={{ width: '100%' }}>
-      <Grid container columnSpacing={6}>
-        <Grid item xs={12}>
-          <Typography fontWeight="bold" variant="h5">
-            Personal Information
-          </Typography>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Controller
-            control={control}
-            name="firstName"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('firstName')}
-                helperText={errors?.firstName?.message}
-                placeholder="First Name"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={6}>
-          <Controller
-            control={control}
-            name="lastName"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('lastName')}
-                helperText={errors?.lastName?.message}
-                placeholder="Last Name"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={6}>
-          <Controller
-            control={control}
-            name="email"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('email')}
-                helperText={errors?.email?.message}
-                placeholder="Email"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={6}>
-          <Controller
-            control={control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('phoneNumber')}
-                helperText={errors?.phoneNumber?.message}
-                placeholder="Phone Number"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={12} sx={{ mt: 6 }}>
-          <Controller
-            control={control}
-            name="address1"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('address1')}
-                helperText={errors?.address1?.message}
-                placeholder="Address Line 1"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={12}>
-          <Controller
-            control={control}
-            name="address2"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('address2')}
-                helperText={errors?.address2?.message}
-                placeholder="Address Line 2"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={3}>
-          <Controller
-            control={control}
-            name="city"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('city')}
-                helperText={errors?.city?.message}
-                placeholder="City"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={3}>
-          <Controller
-            control={control}
-            name="state"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('state')}
-                helperText={errors?.state?.message}
-                placeholder="State"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={3}>
-          <Controller
-            control={control}
-            name="country"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('country')}
-                helperText={errors?.country?.message}
-                placeholder="Country"
-              />
-            )}
-          />
-        </Grid>
-
-        <Grid item xs={3}>
-          <Controller
-            control={control}
-            name="zip"
-            render={({ field }) => (
-              <TextField
-                {...field}
-                error={errors.hasOwnProperty('zip')}
-                helperText={errors?.zip?.message}
-                placeholder="Zip/Postal Code"
-              />
-            )}
-          />
-        </Grid>
+    <Grid container columnSpacing={6}>
+      <Grid item xs={12}>
+        <Typography fontWeight="bold" variant="h5">
+          Personal Information
+        </Typography>
       </Grid>
 
-      <Flex sx={{ justifyContent: 'flex-end', mt: 6 }}>
-        <Button type="submit">Save</Button>
-      </Flex>
-    </form>
+      <Grid item xs={6}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ firstName: e.currentTarget.value })}
+          placeholder="First Name"
+          value={firstName}
+        />
+      </Grid>
+
+      <Grid item xs={6}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ lastName: e.currentTarget.value })}
+          placeholder="Last Name"
+          value={lastName}
+        />
+      </Grid>
+
+      <Grid item xs={6}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ email: e.currentTarget.value })}
+          placeholder="Email"
+          value={email}
+        />
+      </Grid>
+
+      <Grid item xs={6}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ phoneNumber: e.currentTarget.value })}
+          placeholder="Phone Number"
+          value={phoneNumber}
+        />
+      </Grid>
+
+      <Grid item xs={12} sx={{ mt: 6 }}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ address1: e.currentTarget.value })}
+          placeholder="Address Line 1"
+          value={address1}
+        />
+      </Grid>
+
+      <Grid item xs={12}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ address2: e.currentTarget.value })}
+          placeholder="Address Line 2"
+          value={address2}
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ city: e.currentTarget.value })}
+          placeholder="City"
+          value={city}
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ state: e.currentTarget.value })}
+          placeholder="State"
+          value={state}
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ country: e.currentTarget.value })}
+          placeholder="Country"
+          value={country}
+        />
+      </Grid>
+
+      <Grid item xs={3}>
+        <TextField
+          onChange={(e) => updatePersonalInfo({ zip: e.currentTarget.value })}
+          placeholder="Zip/Postal Code"
+          value={zip}
+        />
+      </Grid>
+    </Grid>
   );
 }
 
