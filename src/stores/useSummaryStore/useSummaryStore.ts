@@ -4,14 +4,14 @@ import { persist } from 'zustand/middleware';
 import type { Summary } from 'types/resume.types';
 
 interface SummaryStore extends Summary {
-  setSummary: (summary: Summary) => void;
+  setSummary: (summary: string) => void;
 }
 
 const useSummaryStore = create<SummaryStore>()(
   persist(
     (set) => ({
       summary: '',
-      setSummary: (summary) => set(() => ({ ...summary })),
+      setSummary: (summary) => set(() => ({ summary })),
     }),
     {
       name: 'summary',
