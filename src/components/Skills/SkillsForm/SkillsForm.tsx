@@ -9,8 +9,6 @@ import type { Props } from './SkillsForm.types';
 function SkillsForm({ skills, addSkill, removeSkill }: Props) {
   const [textValue, setTextValue] = useState<string>('');
 
-  console.log(skills);
-
   return (
     <Grid container columnSpacing={6}>
       <Grid item xs={12}>
