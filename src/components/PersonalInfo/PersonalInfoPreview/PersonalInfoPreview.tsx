@@ -25,7 +25,7 @@ function PersonalInfoPreview({
       </Typography>
 
       <Typography variant="body2">
-        {city}, {state}, {country} {zip}
+        {[city, state, country, zip].filter(Boolean).join(', ')}
       </Typography>
 
       <Flex sx={{ flexDirection: 'column', mt: 2 }}>
