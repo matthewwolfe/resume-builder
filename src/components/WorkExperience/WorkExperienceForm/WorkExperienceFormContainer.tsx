@@ -1,4 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { useWorkExperienceStore } from 'stores/useWorkExperienceStore';
@@ -13,7 +14,10 @@ const schema = yup.object().shape({
 });
 
 function WorkExperienceFormContainer() {
-  const { workExperiences, addWorkExperience, removeWorkExperience } = useWorkExperienceStore();
+  const { workExperiences, addWorkExperience, removeWorkExperience, updateWorkExperience } =
+    useWorkExperienceStore();
+
+  const [editIndex, setEditIndex] = useState<number>(-1);
 
   const {
     control,
@@ -37,7 +41,13 @@ function WorkExperienceFormContainer() {
   });
 
   const onSubmit = (workExperience: WorkExperience) => {
-    addWorkExperience(workExperience);
+    if (editIndex === -1) {
+      addWorkExperience(workExperience);
+    } else {
+      updateWorkExperience(workExperience, editIndex);
+    }
+
+    setEditIndex(-1);
     reset();
   };
 
@@ -47,6 +57,7 @@ function WorkExperienceFormContainer() {
       errors={errors}
       onSubmit={handleSubmit(onSubmit)}
       removeWorkExperience={removeWorkExperience}
+      setEditIndex={setEditIndex}
       setValue={setValue}
       workExperiences={workExperiences}
     />

@@ -7,6 +7,7 @@ interface WorkExperienceStore {
   workExperiences: Array<WorkExperience>;
   addWorkExperience: (workExperience: WorkExperience) => void;
   removeWorkExperience: (index: number) => void;
+  updateWorkExperience: (WorkExperience: WorkExperience, index: number) => void;
 }
 
 const useWorkExperienceStore = create<WorkExperienceStore>()(
@@ -19,6 +20,14 @@ const useWorkExperienceStore = create<WorkExperienceStore>()(
         set(({ workExperiences }) => ({
           workExperiences: [
             ...workExperiences.slice(0, index),
+            ...workExperiences.slice(index + 1, workExperiences.length),
+          ],
+        })),
+      updateWorkExperience: (workExperience, index) =>
+        set(({ workExperiences }) => ({
+          workExperiences: [
+            ...workExperiences.slice(0, index),
+            workExperience,
             ...workExperiences.slice(index + 1, workExperiences.length),
           ],
         })),

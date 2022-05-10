@@ -14,7 +14,6 @@ import { Fragment } from 'react';
 import { Controller } from 'react-hook-form';
 import { Button, Flex, TextField } from 'design';
 
-import type { WorkExperience } from 'types/resume.types';
 import type { Props } from './WorkExperienceForm.types';
 
 function WorkExperienceForm({
@@ -22,6 +21,7 @@ function WorkExperienceForm({
   errors,
   onSubmit,
   removeWorkExperience,
+  setEditIndex,
   setValue,
   workExperiences,
 }: Props) {
@@ -52,6 +52,8 @@ function WorkExperienceForm({
                             (
                               Object.keys(workExperience) as Array<keyof typeof workExperience>
                             ).forEach((prop) => setValue(prop, workExperience[prop]));
+
+                            setEditIndex(index);
                           }}
                         >
                           <EditIcon />

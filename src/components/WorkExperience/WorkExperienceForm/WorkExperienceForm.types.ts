@@ -8,6 +8,7 @@ export interface Props extends SharedProps {
   errors: FieldErrors<WorkExperience>;
   onSubmit: () => void;
   removeWorkExperience: (index: number) => void;
+  setEditIndex: (index: number) => void;
   setValue: UseFormSetValue<WorkExperience>;
   workExperiences: Array<WorkExperience>;
 }
