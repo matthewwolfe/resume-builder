@@ -3,12 +3,14 @@ import { useMemo } from 'react';
 import { usePersonalInfoStore } from 'stores/usePersonalInfoStore';
 import { useSkillsStore } from 'stores/useSkillsStore';
 import { useSummaryStore } from 'stores/useSummaryStore';
+import { useWorkExperienceStore } from 'stores/useWorkExperienceStore';
 import ExportJson from './ExportJson';
 
 function ExportJsonContainer() {
   const personalInfoStore = usePersonalInfoStore();
   const { summary } = useSummaryStore();
   const { skills } = useSkillsStore();
+  const { workExperiences } = useWorkExperienceStore();
 
   const json = useMemo(() => {
     const personalInfo = pick(personalInfoStore, [
@@ -31,6 +33,9 @@ function ExportJsonContainer() {
       },
       skills: {
         skills,
+      },
+      workExperience: {
+        workExperiences,
       },
     };
   }, [personalInfoStore]);
