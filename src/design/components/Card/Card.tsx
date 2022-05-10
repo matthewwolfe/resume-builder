@@ -14,7 +14,7 @@ function Card(props: Props) {
   return (
     <StyledMuiCard
       {...props}
-      sx={{ p: 8, maxWidth: 1280, width: 1 }}
+      sx={{ p: 8, maxWidth: 1024, width: 1 }}
       square
       elevation={0}
       variant="outlined"
