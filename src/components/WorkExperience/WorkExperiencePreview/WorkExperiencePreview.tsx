@@ -7,7 +7,7 @@ function WorkExperiencePreview({ workExperiences }: Props) {
   return (
     <Flex sx={{ flexDirection: 'column', width: 1 }}>
       <Typography sx={{ fontWeight: 'bold', mb: 1 }} variant="h5">
-        Summary
+        Work Experience
       </Typography>
 
       <Divider sx={{ borderBottomWidth: 2, mb: 2 }} />
