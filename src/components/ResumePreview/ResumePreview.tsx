@@ -1,3 +1,4 @@
+import { EducationPreview } from 'components/Education';
 import { PersonalInfoPreview } from 'components/PersonalInfo';
 import { SkillsPreview } from 'components/Skills';
 import { SummaryPreview } from 'components/Summary';
@@ -21,6 +22,10 @@ function ResumePreview() {
 
       <Flex sx={{ mb: 6, width: 1 }}>
         <WorkExperiencePreview />
+      </Flex>
+
+      <Flex sx={{ width: 1 }}>
+        <EducationPreview />
       </Flex>
     </Card>
   );

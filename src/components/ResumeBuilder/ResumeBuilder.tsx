@@ -1,13 +1,11 @@
-import Typography from '@mui/material/Typography';
+import { EducationForm } from 'components/Education';
 import { PersonalInfoForm } from 'components/PersonalInfo';
 import { SkillsForm } from 'components/Skills';
 import { SummaryForm } from 'components/Summary';
 import { WorkExperienceForm } from 'components/WorkExperience';
 import { Card, Flex } from 'design';
 
-import { Props } from './ResumeBuilder.types';
-
-function ResumeBuilder(props: Props) {
+function ResumeBuilder() {
   return (
     <Card>
       <Flex sx={{ mb: 8 }}>
@@ -26,9 +24,9 @@ function ResumeBuilder(props: Props) {
         <WorkExperienceForm />
       </Flex>
 
-      <Typography fontWeight="bold" variant="h5">
-        Education
-      </Typography>
+      <Flex>
+        <EducationForm />
+      </Flex>
     </Card>
   );
 }

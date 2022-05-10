@@ -1,22 +1,9 @@
 import { usePersonalInfoStore } from 'stores/usePersonalInfoStore';
 import PersonalInfoPreview from './PersonalInfoPreview';
 
-import { ContainerProps } from './PersonalInfoPreview.types';
-
 function PersonalInfoPreviewContainer() {
-  const {
-    firstName,
-    lastName,
-    email,
-    phoneNumber,
-    address1,
-    address2,
-    city,
-    state,
-    country,
-    zip,
-    setPersonalInfo,
-  } = usePersonalInfoStore();
+  const { firstName, lastName, email, phoneNumber, address1, address2, city, state, country, zip } =
+    usePersonalInfoStore();
 
   return (
     <PersonalInfoPreview

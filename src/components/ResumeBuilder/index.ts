@@ -1,1 +1,1 @@
-export { default as ResumeBuilder } from './ResumeBuilderContainer';
+export { default as ResumeBuilder } from './ResumeBuilder';

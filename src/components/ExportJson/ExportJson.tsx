@@ -7,12 +7,12 @@ function ExportJson({ json }: Props) {
   usePersonalInfoStore();
 
   const onExport = () => {
-    var dataStr = `data:text/json;charset=utf-8,${encodeURIComponent(
+    const jsonData = `data:text/json;charset=utf-8,${encodeURIComponent(
       JSON.stringify(json, null, 2),
     )}`;
 
     const downloadLink = document.createElement('a');
-    downloadLink.setAttribute('href', dataStr);
+    downloadLink.setAttribute('href', jsonData);
     downloadLink.setAttribute('download', 'resume.json');
     downloadLink.click();
   };

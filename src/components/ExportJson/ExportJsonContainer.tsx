@@ -1,5 +1,6 @@
 import pick from 'lodash/pick';
 import { useMemo } from 'react';
+import { useEducationStore } from 'stores/useEducationStore';
 import { usePersonalInfoStore } from 'stores/usePersonalInfoStore';
 import { useSkillsStore } from 'stores/useSkillsStore';
 import { useSummaryStore } from 'stores/useSummaryStore';
@@ -11,6 +12,7 @@ function ExportJsonContainer() {
   const { summary } = useSummaryStore();
   const { skills } = useSkillsStore();
   const { workExperiences } = useWorkExperienceStore();
+  const { educations } = useEducationStore();
 
   const json = useMemo(() => {
     const personalInfo = pick(personalInfoStore, [
@@ -37,8 +39,11 @@ function ExportJsonContainer() {
       workExperience: {
         workExperiences,
       },
+      education: {
+        educations,
+      },
     };
-  }, [personalInfoStore]);
+  }, [personalInfoStore, skills, summary, workExperiences, educations]);
 
   return <ExportJson json={json} />;
 }
