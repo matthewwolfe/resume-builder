@@ -1,9 +1,5 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+const debug = process.env.NODE_ENV !== 'production';
 
-module.exports = (phase, defaultConfig) => {
-  return withBundleAnalyzer({
-    ...defaultConfig,
-  });
+module.exports = {
+  assetPrefix: !debug ? '/resume-builder/' : '',
 };
