@@ -6,7 +6,7 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "rm-docs": "rimraf docs",
-    "build": "npm run rm-docs && next build && next export && node ./scripts/build.js",
+    "build": "npm run rm-docs && next build && next export && node ./scripts/build.mjs",
     "dev": "next dev",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "start": "next start",

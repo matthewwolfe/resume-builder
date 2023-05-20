@@ -1,5 +1,5 @@
-const mv = require('mv');
-const touch = require('touch');
+import mv from 'mv';
+import touch from 'touch';
 
 function move() {
   return new Promise((resolve, reject) => {
