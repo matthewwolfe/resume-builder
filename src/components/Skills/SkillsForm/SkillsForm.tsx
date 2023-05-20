@@ -19,7 +19,15 @@ function SkillsForm({ skills, addSkill, removeSkill }: Props) {
 
       <Grid item xs={12} sx={{ mt: 4 }}>
         {skills.map((skill, index) => (
-          <Chip key={index} label={skill} onDelete={() => removeSkill(index)} sx={{ mr: 1 }} />
+          <Chip
+            key={index}
+            label={skill}
+            onDelete={() => removeSkill(index)}
+            sx={{
+              mb: 1,
+              mr: 1,
+            }}
+          />
         ))}
       </Grid>
 

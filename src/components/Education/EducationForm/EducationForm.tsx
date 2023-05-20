@@ -79,12 +79,13 @@ function EducationForm({
           <Controller
             control={control}
             name="institution"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('institution')}
                 helperText={errors?.institution?.message}
+                onChange={onChange}
                 placeholder="Institution"
+                value={value}
               />
             )}
           />
@@ -94,12 +95,13 @@ function EducationForm({
           <Controller
             control={control}
             name="degree"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('degree')}
                 helperText={errors?.degree?.message}
+                onChange={onChange}
                 placeholder="Degree"
+                value={value}
               />
             )}
           />
@@ -109,12 +111,13 @@ function EducationForm({
           <Controller
             control={control}
             name="graduationDate"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('graduationDate')}
                 helperText={errors?.graduationDate?.message}
+                onChange={onChange}
                 placeholder="Graduation Date"
+                value={value}
               />
             )}
           />
@@ -124,12 +127,13 @@ function EducationForm({
           <Controller
             control={control}
             name="city"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('city')}
                 helperText={errors?.city?.message}
+                onChange={onChange}
                 placeholder="City"
+                value={value}
               />
             )}
           />
@@ -139,12 +143,13 @@ function EducationForm({
           <Controller
             control={control}
             name="state"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('state')}
                 helperText={errors?.state?.message}
+                onChange={onChange}
                 placeholder="State"
+                value={value}
               />
             )}
           />
@@ -154,12 +159,13 @@ function EducationForm({
           <Controller
             control={control}
             name="country"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('country')}
                 helperText={errors?.country?.message}
+                onChange={onChange}
                 placeholder="Country"
+                value={value}
               />
             )}
           />

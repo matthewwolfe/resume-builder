@@ -11,7 +11,7 @@ const schema = yup.object().shape({
   institution: yup.string().required().label('Institution'),
   degree: yup.string().required().label('Degree'),
   graduationDate: yup.string().required().label('Graduation Date'),
-  summary: yup.string().required().label('Summary'),
+  summary: yup.string().label('Summary'),
 });
 
 function EducationFormContainer() {

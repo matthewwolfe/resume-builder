@@ -81,12 +81,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="organizationName"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('organizationName')}
                 helperText={errors?.organizationName?.message}
+                onChange={onChange}
                 placeholder="Organization Name"
+                value={value}
               />
             )}
           />
@@ -96,12 +97,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="title"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('title')}
                 helperText={errors?.title?.message}
+                onChange={onChange}
                 placeholder="Title"
+                value={value}
               />
             )}
           />
@@ -111,12 +113,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="startDate"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('startDate')}
                 helperText={errors?.startDate?.message}
+                onChange={onChange}
                 placeholder="Start Date"
+                value={value}
               />
             )}
           />
@@ -126,12 +129,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="endDate"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('endDate')}
                 helperText={errors?.endDate?.message}
+                onChange={onChange}
                 placeholder="End Date"
+                value={value}
               />
             )}
           />
@@ -162,12 +166,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="city"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('city')}
                 helperText={errors?.city?.message}
+                onChange={onChange}
                 placeholder="City"
+                value={value}
               />
             )}
           />
@@ -177,12 +182,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="state"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('state')}
                 helperText={errors?.state?.message}
+                onChange={onChange}
                 placeholder="State"
+                value={value}
               />
             )}
           />
@@ -192,12 +198,13 @@ function WorkExperienceForm({
           <Controller
             control={control}
             name="country"
-            render={({ field }) => (
+            render={({ field: { onChange, value } }) => (
               <TextField
-                {...field}
                 error={errors.hasOwnProperty('country')}
                 helperText={errors?.country?.message}
+                onChange={onChange}
                 placeholder="Country"
+                value={value}
               />
             )}
           />
