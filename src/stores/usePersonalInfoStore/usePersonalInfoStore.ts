@@ -4,6 +4,7 @@ import { persist } from 'zustand/middleware';
 import type { PersonalInfo } from 'types/resume.types';
 
 interface PersonalInfoStore extends PersonalInfo {
+  fromJson: (state: PersonalInfo) => void;
   updatePersonalInfo: (personalInfo: Partial<PersonalInfo>) => void;
 }
 
@@ -21,6 +22,7 @@ const usePersonalInfoStore = create<PersonalInfoStore>()(
       state: '',
       country: '',
       zip: '',
+      fromJson: (state) => set(() => state),
       updatePersonalInfo: (personalInfo) => set(() => ({ ...personalInfo })),
     }),
     {

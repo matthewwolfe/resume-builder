@@ -28,7 +28,6 @@ function ImportJson({ isOpen, json, onSubmit, setIsOpen, setJson }: Props) {
             minRows={20}
             maxRows={20}
             onChange={(e) => setJson(e.currentTarget.value)}
-            placeholder="Json"
             value={json}
           />
         </DialogContent>

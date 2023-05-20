@@ -3,9 +3,13 @@ import { persist } from 'zustand/middleware';
 
 import type { Education } from 'types/resume.types';
 
-interface EducationStore {
+interface State {
   educations: Education[];
+}
+
+interface EducationStore extends State {
   addEducation: (education: Education) => void;
+  fromJson: (state: State) => void;
   removeEducation: (index: number) => void;
   updateEducation: (education: Education, index: number) => void;
 }
@@ -16,6 +20,7 @@ const useEducationStore = create<EducationStore>()(
       educations: [],
       addEducation: (education) =>
         set((state) => ({ educations: [...state.educations, education] })),
+      fromJson: (state) => set(() => state),
       removeEducation: (index) =>
         set(({ educations }) => ({
           educations: [
