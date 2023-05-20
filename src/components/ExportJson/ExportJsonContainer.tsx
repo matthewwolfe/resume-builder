@@ -20,6 +20,7 @@ function ExportJsonContainer() {
       'lastName',
       'email',
       'phoneNumber',
+      'links',
       'address1',
       'address2',
       'city',

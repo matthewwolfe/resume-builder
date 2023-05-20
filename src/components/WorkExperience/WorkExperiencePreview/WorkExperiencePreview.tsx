@@ -1,7 +1,7 @@
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import { Flex } from 'design';
-import { Props } from './WorkExperiencePreview.types';
+import type { Props } from './WorkExperiencePreview.types';
 
 function WorkExperiencePreview({ workExperiences }: Props) {
   return (

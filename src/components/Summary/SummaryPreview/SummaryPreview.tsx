@@ -1,7 +1,7 @@
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import { Flex } from 'design';
-import { Props } from './SummaryPreview.types';
+import type { Props } from './SummaryPreview.types';
 
 function SummaryPreview({ summary }: Props) {
   return (

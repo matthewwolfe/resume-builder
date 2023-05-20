@@ -1,6 +1,6 @@
 import { Link, Typography } from '@mui/material';
 import { Flex } from 'design';
-import { Props } from './PersonalInfoPreview.types';
+import type { Props } from './PersonalInfoPreview.types';
 
 function PersonalInfoPreview({
   firstName,

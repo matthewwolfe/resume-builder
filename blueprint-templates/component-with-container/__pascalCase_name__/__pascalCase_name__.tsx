@@ -1,4 +1,4 @@
-import { Props } from './{{pascalCase name}}.types';
+import type { Props } from './{{pascalCase name}}.types';
 
 function {{pascalCase name}}() {
   

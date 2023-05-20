@@ -1,6 +1,6 @@
 import {{pascalCase name}} from './{{pascalCase name}}';
 
-import { ContainerProps } from './{{pascalCase name}}.types';
+import type { ContainerProps } from './{{pascalCase name}}.types';
 
 function {{pascalCase name}}Container() {
   return <{{pascalCase name}} />;

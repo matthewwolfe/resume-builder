@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { TextField } from 'design';
-import { Props } from './SummaryForm.types';
+import type { Props } from './SummaryForm.types';
 
 function SummaryForm({ summary, setSummary }: Props) {
   return (
