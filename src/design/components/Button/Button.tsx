@@ -9,7 +9,7 @@ function Button({ variant = 'contained', ...props }: Props): JSX.Element {
       {...props}
       disableElevation
       disableRipple
-      sx={{ borderRadius: 0, py: 3, px: 12 }}
+      sx={{ borderRadius: 0, py: 2, px: 8 }}
       variant={variant}
     />
   );

@@ -1,5 +1,6 @@
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { ExportJson } from 'components/ExportJson';
+import { ImportJson } from 'components/ImportJson';
 import { ResumeBuilder } from 'components/ResumeBuilder';
 import { ResumePreview } from 'components/ResumePreview';
 import { Button, Flex } from 'design';
@@ -34,13 +35,17 @@ function Dashboard({ layout, setLayout }: Props) {
         </ButtonGroup>
 
         <Flex>
-          <Flex mr={2}>
+          <Flex mr={1}>
             <Button onClick={() => window.print()} variant="contained">
               Save
             </Button>
           </Flex>
 
-          <ExportJson />
+          <Flex mr={1}>
+            <ExportJson />
+          </Flex>
+
+          <ImportJson />
         </Flex>
       </Flex>
 
