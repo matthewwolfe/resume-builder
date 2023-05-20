@@ -1,7 +1,7 @@
 export interface ContainerProps extends SharedProps {}
 
 export interface Props extends SharedProps {
-  skills: Array<string>;
+  skills: string[];
 }
 
 interface SharedProps {}

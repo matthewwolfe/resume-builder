@@ -5,7 +5,7 @@ export interface ContainerProps extends SharedProps {}
 
 export interface Props extends SharedProps {
   control: Control<Education>;
-  educations: Array<Education>;
+  educations: Education[];
   errors: FieldErrors<Education>;
   onSubmit: () => void;
   removeEducation: (index: number) => void;

@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 import type { Education } from 'types/resume.types';
 
 interface EducationStore {
-  educations: Array<Education>;
+  educations: Education[];
   addEducation: (education: Education) => void;
   removeEducation: (index: number) => void;
   updateEducation: (education: Education, index: number) => void;

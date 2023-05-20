@@ -10,7 +10,7 @@ export interface Props extends SharedProps {
   removeWorkExperience: (index: number) => void;
   setEditIndex: (index: number) => void;
   setValue: UseFormSetValue<WorkExperience>;
-  workExperiences: Array<WorkExperience>;
+  workExperiences: WorkExperience[];
 }
 
 interface SharedProps {}

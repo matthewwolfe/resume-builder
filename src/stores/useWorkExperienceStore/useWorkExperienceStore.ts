@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 import type { WorkExperience } from 'types/resume.types';
 
 interface WorkExperienceStore {
-  workExperiences: Array<WorkExperience>;
+  workExperiences: WorkExperience[];
   addWorkExperience: (workExperience: WorkExperience) => void;
   removeWorkExperience: (index: number) => void;
   updateWorkExperience: (WorkExperience: WorkExperience, index: number) => void;

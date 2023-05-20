@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 interface SkillsStore {
-  skills: Array<string>;
+  skills: string[];
   addSkill: (skill: string) => void;
   removeSkill: (index: number) => void;
 }
