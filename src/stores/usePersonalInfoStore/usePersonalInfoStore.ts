@@ -14,6 +14,7 @@ const usePersonalInfoStore = create<PersonalInfoStore>()(
       lastName: '',
       email: '',
       phoneNumber: '',
+      links: '',
       address1: '',
       address2: '',
       city: '',

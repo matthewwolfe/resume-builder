@@ -7,6 +7,7 @@ function PersonalInfoFormContainer() {
     lastName,
     email,
     phoneNumber,
+    links,
     address1,
     address2,
     city,
@@ -22,6 +23,7 @@ function PersonalInfoFormContainer() {
       lastName={lastName}
       email={email}
       phoneNumber={phoneNumber}
+      links={links}
       address1={address1}
       address2={address2}
       city={city}

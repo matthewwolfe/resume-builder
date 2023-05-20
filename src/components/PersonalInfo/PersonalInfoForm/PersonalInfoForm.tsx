@@ -1,13 +1,15 @@
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { TextField } from 'design';
-import { Props } from './PersonalInfoForm.types';
+
+import type { Props } from './PersonalInfoForm.types';
 
 function PersonalInfoForm({
   firstName,
   lastName,
   email,
   phoneNumber,
+  links,
   address1,
   address2,
   city,
@@ -53,6 +55,17 @@ function PersonalInfoForm({
           onChange={(e) => updatePersonalInfo({ phoneNumber: e.currentTarget.value })}
           placeholder="Phone Number"
           value={phoneNumber}
+        />
+      </Grid>
+
+      <Grid item xs={12}>
+        <TextField
+          multiline
+          minRows={3}
+          maxRows={5}
+          onChange={(e) => updatePersonalInfo({ links: e.currentTarget.value })}
+          placeholder="Links"
+          value={links}
         />
       </Grid>
 

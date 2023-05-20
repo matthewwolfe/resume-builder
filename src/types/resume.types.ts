@@ -21,6 +21,7 @@ export interface PersonalInfo extends Address {
   lastName: string;
   email: string;
   phoneNumber: string;
+  links: string;
 }
 
 export interface Summary {
